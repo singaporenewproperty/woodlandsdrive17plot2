@@ -1,0 +1,127 @@
+
+.fieldset-border-radius {
+    border: 2px solid #fff !important;
+    border-radius: 10px !important;
+    position: relative;
+}
+
+.calc-pointer-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% - 82px);
+    z-index: 5;
+}
+
+    .calc-pointer-image img {
+        width: 180px;
+        height: auto;
+    }
+
+.arrow-inner::before {
+    content: "";
+    position: absolute;
+    top: 31.2px;
+    right: -10px;
+    z-index: 30;
+    width: 42px;
+    height: 6px;
+   
+    transform: rotate(36deg);
+}
+
+.arrow-inner::after {
+    content: "";
+    position: absolute;
+    top: 56.8px;
+    right: -12px;
+    z-index: 30;
+    width: 51px;
+    height: 6px;
+   
+    transform: rotate(-39deg);
+}
+
+.td-align-bottom {
+    vertical-align: bottom;
+    border-bottom: none !important;
+}
+
+.td-h-66 {
+    height: 66px;
+}
+
+.user-input-div {
+    display: flex;
+    align-items: center;
+    color: #3b3b3b;
+    border: 2px solid #283852;
+    border-radius: 100px;
+    font-size: 20px;
+    overflow: hidden;
+    background-color: #fff !important;
+}
+
+    .user-input-div div {
+        width: 36px;
+        height: 37.28px !important;
+        font-size: 17px;
+        text-align: center;
+        font-weight: bold;
+        background-color: #fff !important;
+        padding: 6px 0px 0px 5px;
+    }
+
+.CalcInput {
+    background-color: white;
+    /*background-image: url('../../assets/images/calculator/dollarsign.png');*/
+    padding-left: 20px;
+    background-position: 4px center;
+    background-size: 11px;
+    background-repeat: no-repeat;
+    text-align: left;
+    border: none;
+    border-left: 2px solid #283852;
+    border-radius: 0px !important;
+}
+
+    .CalcInput:focus {
+        border-left: 2px solid #283852;
+    }
+
+.border-color-red {
+    border-color: red !important;
+}
+
+.user-input-div input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.calculated_val {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #283852 !important;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0px !important;
+}
+
+.negativeValueCss {
+    color: red !important;
+}
+
+.calc-input-validation-min, .calc-input-validation-max {
+    display: block;
+    font-size: 12px;
+    color: red;
+    font-weight: 600;
+}
+
+@media(max-width:992px) {
+    .calc-pointer-image, .arrow-inner::before, .arrow-inner::after {
+        display: none;
+    }
+}
+
+

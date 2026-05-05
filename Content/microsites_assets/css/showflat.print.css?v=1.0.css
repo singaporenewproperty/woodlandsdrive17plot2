@@ -1,0 +1,119 @@
+﻿@media print {
+
+    /* =====================
+     PAGE SETUP
+  ===================== */
+    @page {
+        size: A4 portrait;
+        margin: 15mm 20mm;
+    }
+
+    /* =====================
+     HIDE CHROME & UI
+     Scoped — only obvious UI chrome
+  ===================== */
+    nav,
+    .navbar,
+    .sticky-header,
+    .whatsapp-float,
+    .enquiry-widget,
+    .enquiry-form-section,
+    .cookie-banner,
+    .pdpa-banner,
+    .video-wrapper,
+    iframe,
+    .cta-section,
+    .modal,
+    .modal-backdrop {
+        display: none !important;
+    }
+
+    /* =====================
+     BODY — minimal, non-destructive
+  ===================== */
+    body {
+        font-size: 12pt;
+        line-height: 1.6;
+        color: #000 !important;
+        background: #fff !important;
+    }
+
+    /* =====================
+     HEADINGS
+  ===================== */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        page-break-after: avoid;
+    }
+
+    /* =====================
+     IMAGES — safe constraints only
+  ===================== */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+
+    /* =====================
+     BACKGROUND — scoped to hero/banner only
+     NOT a blanket * selector
+  ===================== */
+    .hero-section,
+    .hero-banner,
+    .banner-overlay,
+    .section-dark,
+    .section-bg {
+        background-image: none !important;
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+
+    /* =====================
+     PAGE BREAKS
+  ===================== */
+    .floor-plans-section,
+    .location-section,
+    .developer-section {
+        page-break-before: always;
+    }
+
+    .unit-type-block,
+    .floor-plan-img,
+    .site-plan-img {
+        page-break-inside: avoid;
+    }
+
+    /* =====================
+     LINKS — only in content area
+     NOT globally (avoids nav/footer URL spam)
+  ===================== */
+    .content-area a[href]:after,
+    .developer-section a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript"]:after,
+    a[href^="tel"]:after,
+    a[href^="mailto"]:after {
+        content: "" !important;
+    }
+
+    /* =====================
+     PRINT STAMP
+     Use data attribute so each template
+     sets its own project name via Razor
+  ===================== */
+    .print-header {
+        display: block !important;
+        text-align: center;
+        font-size: 10pt;
+        color: #555;
+        border-bottom: 1pt solid #ccc;
+        padding-bottom: 8pt;
+        margin-bottom: 16pt;
+    }
+}

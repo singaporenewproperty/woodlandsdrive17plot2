@@ -1,0 +1,320 @@
+
+.main {
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px !important;
+    flex-wrap: wrap;
+}
+
+.card1, .card2 {
+    background-color: #ffd3a0;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px; /* Add margin for spacing between cards */
+}
+
+.card2 {
+    background-color: #a1d2ff;
+}
+
+.card_img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover; /* Ensure image maintains aspect ratio and is cropped if necessary */
+    border: 5px solid white;
+    border-radius: 30px;
+}
+
+.text {
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.card1_heading, .card2_heading {
+    font-size: 2.0em;
+    color: #e37325;
+    font-weight: 700;
+    line-height: 2rem;
+    text-transform: uppercase;
+}
+
+.card2_heading {
+    color: #041e42;
+}
+
+.card2 .description {
+    font-size: 1.5em;
+    color: black;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.timing {
+    width: 50%;
+    /*padding: 10px;*/ /* Adjust padding to set fixed space between time slots */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.timing_text {
+    font-size: 1.0em;
+    font-weight: 400;
+    /*margin-left: 10px;*/ /* Adjust margin for spacing between radio button and text */
+    display: inline-block;
+    line-height: 1.5em; /* Ensure proper alignment with radio button */
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+
+.register_button, .consult_button {
+    background-color: #e37325;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 13px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.consult_button {
+    background-color: #041e42;
+}
+
+.icon img {
+    width: 90%;
+    height: auto;
+}
+
+.register_button_text {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .card1_heading, .card2_heading {
+        font-size: 2em;
+    }
+
+    .booking {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .register_button_text {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 20%;
+        height: auto;
+    }
+
+        .icon img {
+            width: 80%;
+            height: auto;
+        }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .card_img {
+    }
+
+    .card1_heading, .card2_heading {
+        font-size: 2em;
+    }
+
+    .booking {
+    }
+
+    .register_button_text {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 12%;
+        height: auto;
+    }
+
+        .icon img {
+            width: 80%;
+            height: auto;
+        }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .card_img {
+        width: 100%;
+    }
+
+    .card1, .card2 {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .card1_heading, .card2_heading {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 2rem;
+        text-transform: uppercase;
+    }
+
+    .booking {
+        flex-wrap: wrap;
+    }
+
+    .register_button_text {
+        font-size: 18px;
+    }
+
+    .icon {
+        width: 15%;
+        height: auto;
+    }
+
+        .icon img {
+            width: 80%;
+            height: auto;
+        }
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content:not(.ignore-model-content) {
+   
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 0px;
+    width: 80%;
+    max-width: 750px;
+    border-radius: 13px;
+}
+
+.modal-header {
+    padding: 20px 20px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+    .modal-header h3 {
+        margin: 0;
+        font-size: 35px;
+        font-weight: 500;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    .modal-header .close {
+        font-size: 26px;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.modal-content form {
+    padding: 20px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+    .modal-content form input,
+    .modal-content form select,
+    .modal-content form textarea,
+    .modal-content form button {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        margin-bottom: 15px;
+        background-color: #fff; /* Adjust background color as needed */
+        border: 2px solid #ddd; /* Add border for input fields */
+        border-radius: 5px; /* Add border radius for input fields */
+    }
+
+    .modal-content form button {
+      
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .modal-content form button:hover {
+            opacity: 0.8;
+        }
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .modal-content {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 0px;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 13px;
+    }
+
+    .modal-header h3 {
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .card_img {
+        width: 100%;
+    }
+
+    .card1, .card2 {
+        flex-wrap: wrap;
+    }
+
+    .card1_heading, .card2_heading {
+        font-size: 1.8em;
+        line-height: 2rem;
+    }
+
+    .booking {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .register_button_text {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 30%;
+        height: auto;
+    }
+
+        .icon img {
+            width: 80%;
+            height: auto;
+        }
+
+    .card2_heading {
+        font-size: 1.8em;
+        line-height: 2rem;
+    }
+}
+

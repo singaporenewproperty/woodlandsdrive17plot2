@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://woodlandsdrive17plot2admin.showflat.com.sg/sitemap.xml
